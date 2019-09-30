@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RigidbodyFirstPerson2 : MonoBehaviour
 {
-    public float moveSpeed = 1f;
+    public float moveSpeed;
     public Vector3 inputVector;
     public Rigidbody thisRigidbody;
 
@@ -20,8 +20,8 @@ public class RigidbodyFirstPerson2 : MonoBehaviour
     void Update()
     {
         // Delta
-        mouseX = Input.GetAxis("Mouse X");
-        mouseY = Input.GetAxis("Mouse Y");
+        mouseX = Input.GetAxis("Mouse X") * 5f;
+        mouseY = Input.GetAxis("Mouse Y") * 5f;
 
         transform.Rotate(0, mouseX, 0);
         Camera.main.transform.Rotate(-mouseY, 0, 0);
