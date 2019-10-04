@@ -7,6 +7,8 @@ public class RigidbodyFirstPerson2 : MonoBehaviour
     public float moveSpeed;
     public Vector3 inputVector;
     public Rigidbody thisRigidbody;
+    public bool startedMoving;
+    public float magnitude;
 
     void Start()
     {
@@ -19,6 +21,12 @@ public class RigidbodyFirstPerson2 : MonoBehaviour
 
     void Update()
     {
+        magnitude = thisRigidbody.velocity.magnitude;
+        if (thisRigidbody.velocity.magnitude > 0.5f)
+        {
+            startedMoving = true;
+        }
+        
         // Delta
         mouseX = Input.GetAxis("Mouse X") * 5f;
         mouseY = Input.GetAxis("Mouse Y") * 5f;
