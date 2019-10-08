@@ -6,6 +6,8 @@ public class PigeonSpeed : MonoBehaviour
 {
     public float currentSpeed;
     public float rateOfIncrease;
+    public RigidbodyFirstPerson2 playerMovementScript;
+
     void Start()
     {
         
@@ -13,6 +15,9 @@ public class PigeonSpeed : MonoBehaviour
 
     void Update()
     {
-        currentSpeed = currentSpeed + (Time.deltaTime * rateOfIncrease);
+        if (playerMovementScript.startedMoving == true) // Pigeons will increase speed when player starts moving
+        {
+            currentSpeed = currentSpeed + (Time.deltaTime * rateOfIncrease);
+        }
     }
 }
