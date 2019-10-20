@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RigidbodyFirstPerson2 : MonoBehaviour
 {
@@ -50,5 +51,12 @@ public class RigidbodyFirstPerson2 : MonoBehaviour
         thisRigidbody.velocity = inputVector * moveSpeed + Physics.gravity * .69f; 
     }
 
-
+    void OnCollisionEnter(Collision collision)
+    {
+         if (collision.transform.tag == "pigeontag")
+        {
+            Debug.Log("Pigeon cAUGht you");
+            SceneManager.LoadScene(sceneName: "EndScene");
+        }
+    }
 }

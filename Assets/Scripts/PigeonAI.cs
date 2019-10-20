@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PigeonAI : MonoBehaviour
 {
-    public GameObject Capsule;
+    public GameObject pigeonTarget;
     public GameObject PigeonSpeed;
     public float pigeonSpeed; // (initial? pigeon speed)
     RigidbodyFirstPerson2 playerMovementScript;
@@ -12,8 +12,8 @@ public class PigeonAI : MonoBehaviour
 
     void Start()
     {
-        Capsule = GameObject.Find("Capsule"); // at the start of the game, the pigeons will find the player
-        playerMovementScript = Capsule.GetComponent<RigidbodyFirstPerson2>(); // getting the player move script 
+        pigeonTarget = GameObject.Find("Capsule"); // at the start of the game, the pigeons will find the player
+        playerMovementScript = pigeonTarget.GetComponent<RigidbodyFirstPerson2>(); // getting the player move script 
         PigeonSpeed = GameObject.Find("PigeonSpeed");
         pigeonSpeedScript = PigeonSpeed.GetComponent<PigeonSpeed>();
     }
@@ -26,8 +26,8 @@ public class PigeonAI : MonoBehaviour
         {
         // Pigeon movement
         float step = pigeonSpeed * Time.deltaTime; // calculate distance to move
-        transform.position = Vector3.MoveTowards(transform.position, Capsule.transform.position, step);
-        transform.LookAt(Capsule.transform, Vector3.up);
+        transform.position = Vector3.MoveTowards(transform.position, pigeonTarget.transform.position, step);
+        transform.LookAt(pigeonTarget.transform, Vector3.up);
         }
 
         pigeonSpeed = pigeonSpeedScript.currentSpeed;

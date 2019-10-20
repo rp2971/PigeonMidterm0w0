@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8368196713684552115}
   - component: {fileID: 5411681396402177041}
   - component: {fileID: 8093572190066108311}
+  - component: {fileID: 4135449808058479605}
   m_Layer: 0
   m_Name: PigeonContainer
-  m_TagString: Untagged
+  m_TagString: pigeontag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Capsule: {fileID: 0}
+  PigeonSpeed: {fileID: 0}
   pigeonSpeed: 0.5
 --- !u!54 &5411681396402177041
 Rigidbody:
@@ -77,6 +79,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.519722, y: 0.598052, z: 0.36939508}
   m_Center: {x: -0.045025826, y: 0.28229856, z: 0.030513227}
+--- !u!114 &4135449808058479605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641636460047958474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4995ccc1b20ad2479c0ec4ebfab8627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myBreadScript: {fileID: 0}
 --- !u!1001 &4932162261640196665
 PrefabInstance:
   m_ObjectHideFlags: 0
