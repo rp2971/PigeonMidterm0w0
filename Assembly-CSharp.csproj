@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\RigidbodyFirstPerson2.cs" />
     <Compile Include="Assets\Scripts\RigidbodyVehicle.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\SimpleRotate.cs" />
     <Compile Include="Assets\Scripts\StartScreen.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Reference Include="Unity.Timeline.Editor">
