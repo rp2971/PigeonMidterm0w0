@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bread : MonoBehaviour
 {
@@ -27,6 +28,11 @@ public class Bread : MonoBehaviour
 
             //Pigeon know bread has been thrown
         }
+
+        //if(breadHasBeenThrow == true)
+        //{
+          //  SceneManager.LoadScene("WinScene");
+        //}
     }
 
     void OnCollisionEnter(Collision other)
